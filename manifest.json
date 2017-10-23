@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "GitHub Project column widener",
+  "description": "This extension allows the user to make GitHub project columns wider.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*/projects/*"],
+      "js": ["logic.js"]
+    }
+  ]
+}
